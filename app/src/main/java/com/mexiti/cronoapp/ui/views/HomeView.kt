@@ -77,7 +77,7 @@ fun ContentHomeView(it: PaddingValues,
                     startActions = listOf(delete),
                     swipeThreshold = 150.dp
                 ) {
-                    ContactCard(title = item.title,
+                    ContactCard(title = item.title, telefono = item.telefono.toString()
 
                     ) {
                         navController.navigate("EditView/${item.id}")

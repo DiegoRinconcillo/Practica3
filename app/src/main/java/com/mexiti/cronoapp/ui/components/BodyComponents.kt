@@ -42,7 +42,7 @@ fun MainTextField(value: String,
 }
 
 @Composable
-fun ContactCard(title: String,
+fun ContactCard(title: String, telefono: String,
                 onClick: () -> Unit ) {
     Box(
         modifier = Modifier
@@ -59,6 +59,9 @@ fun ContactCard(title: String,
                 fontSize = 20.sp,
                 fontWeight = FontWeight.Bold
                 )
+            Text(text = telefono,
+                fontSize = 15.sp
+            )
 
             Divider(
                 modifier = Modifier
@@ -96,7 +99,7 @@ fun MainTitlePreview(){
 
 @Preview(showBackground = true)
 @Composable
-fun ContactCardPreview(){ ContactCard(title = "Cronos") {
+fun ContactCardPreview(){ ContactCard(title = "Cronos", telefono = "2343234") {
         
     }
 }
